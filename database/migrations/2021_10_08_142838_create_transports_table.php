@@ -13,7 +13,9 @@ class CreateTransportsTable extends Migration
      */
     public function up()
     {
+        //// New table transport
         Schema::create('transports', function (Blueprint $table) {
+            // Creating new columns for the transport table
             $table->id();
             $table->string('type', 50);
             $table->timestamps();

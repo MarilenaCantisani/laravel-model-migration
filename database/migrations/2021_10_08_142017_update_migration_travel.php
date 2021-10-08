@@ -14,7 +14,7 @@ class UpdateMigrationTravel extends Migration
     public function up()
     {
         Schema::table('travels', function (Blueprint $table) {
-            // Create new data for the travel table 
+            //// Create new data for the travel table 
             $table->text('description');
             $table->tinyInteger('duration');
             $table->foreignId('id_transport');
@@ -29,7 +29,7 @@ class UpdateMigrationTravel extends Migration
     public function down()
     {
         Schema::table('travels', function (Blueprint $table) {
-            // Remove the new fields created
+            //// Remove the new fields created
             $table->dropColumn('description');
             $table->dropColumn('duration');
             $table->dropColumn('id_transport');
