@@ -14,7 +14,11 @@ class CreateTravelsTable extends Migration
     public function up()
     {
         Schema::create('travels', function (Blueprint $table) {
+            // Creation of the structure of the travel table 
             $table->id();
+            $table->string('destination', 100);
+            $table->string('departure', 100);
+            $table->float('price', 10, 2)->unsigned(); //? price without negative value
             $table->timestamps();
         });
     }
